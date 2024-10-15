@@ -19,5 +19,5 @@ def create_blog(blog: BlogModel, id: int, version: int = 1):
     }
 
 @router.post('/new/{id}/comment')
-def create_comment(blog: BlogModel, id: int, comment_id: int = Query(None, title="id of the comment", description="Some description for comment_id", alias="commentId")):
+def create_comment(blog: BlogModel, id: int, comment_id: int = Query(None, title="id of the comment", description="Some description for comment_id", alias="commentId", deprecated=True) ):
     pass
